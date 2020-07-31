@@ -1,10 +1,16 @@
 import React, {Component} from 'react'
 
 class Search extends Component {
+
+
+
   render() {
     return (
       <div>
-        <h2>This will be the search function. </h2>
+        <form onSubmit="">
+          <input type="search" />
+          <button>Search</button>
+        </form>
       </div>
     )
   }

@@ -1,10 +1,22 @@
 import React, {Component} from 'react';
+import './css/nav.css'
+import {Link} from 'react-router-dom';
 
 
 class Nav extends Component {
   render() {
     return (
-      <h3>This will be the Nav Bar</h3>
+      <nav id="nav-bar">
+        <div>
+          <Link to="/">
+            Home
+          </Link>
+          |
+          <Link to="users/Profile">
+            Profile
+          </Link>
+        </div>
+      </nav>
     )
   }
 }

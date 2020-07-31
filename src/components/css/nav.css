@@ -1,0 +1,19 @@
+#nav-bar {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  min-height: 10vh;
+  background: black;
+  padding: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
