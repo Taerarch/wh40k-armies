@@ -1,68 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Warhammer List Comparer Project
 
-## Available Scripts
+Core Features:
 
-In the project directory, you can run:
+- Ability to search through army lists dependent on faction/army as well as battle size
+- Users Login/Signup Army Lists	
+- Way to easily upload an army list from Battlescribe
+- Accessible show page for an army list
+- Ability to write a description for one of your own army lists
+- Ability to write comments on any list with up and downvoting
+- Popularity index on various armies
+- Nav-bar 
 
-### `npm start`
+Stretch Goals:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Distinction between Matched play and crusade lists
+- Display of individual units while on the show page getting information from battlescribe or wahapedia
+- Title Image for armies, image or photo
+- Section for news articles or opinion pieces
+- Some sort of tags system for armies, eg. ‘Castle’, ‘Assault’, ‘Mobile’, ‘Horde’ etc.
+- Search through armies based on individual units
+- Nice slidey turnwheel? of the army images
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Pages:
+	
+- Home/Search page
+- List Show page
+- User Login/Signup page
+- Nav Bar
 
-### `npm test`
+Database:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Users - Username, Email, Password and Auth
+- Army Lists, Name, Army Document, User
