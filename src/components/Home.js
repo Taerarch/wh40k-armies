@@ -4,9 +4,10 @@ import './css/home.css'
 
 
 class Home extends Component {
+
   render() {
     return (
-      <div class="main">
+      <div className="main">
         <div>
           <h1>Warhammer 40k Armies</h1>
           <Search />

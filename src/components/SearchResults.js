@@ -4,11 +4,14 @@ import './css/search-results.css'
 
 
 class SearchResults extends Component {
+
   render () {
     return (
       <div class="main">
-        <h1>This will be the search results page.</h1>
+        <h1>This will be the search results for {window.location.href.split('/')[4]}</h1>
       </div>
     )
   }
 }
+
+export default SearchResults
