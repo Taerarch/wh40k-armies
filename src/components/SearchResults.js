@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import Search from './Search.js'
-import './css/search-results.css'
+import './css/Search-results.css'
 
 
 class SearchResults extends Component {

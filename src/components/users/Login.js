@@ -1,6 +1,6 @@
 import React, {useCallback, useContext} from 'react';
 import {withRouter, Redirect} from 'react-router';
-import firebaseConfig from '../firebase/Base.js';
+import firebase from '../firebase/Base.js';
 import {AuthContext} from './Auth'
 
 // firebase.initializeApp(firebaseConfig);
@@ -10,7 +10,7 @@ const Login = ({history}) => {
     event.preventDefault();
     const {email, password} = event.target.elements;
     try {
-      await firebaseConfig
+      await firebase
         .auth()
         .signInWithEmailAndPassword(email.value, password.value);
       history.push('/');

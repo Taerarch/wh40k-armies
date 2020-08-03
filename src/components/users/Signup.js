@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import {withRouter} from 'react-router';
-import firebaseConfig from '../firebase/Base.js';
+import firebase from '../firebase/Base.js';
 
 
 // firebase.initializeApp(firebaseConfig);
@@ -10,7 +10,7 @@ const SignUp = ({history}) => {
     event.preventDefault();
     const {email, password} = event.target.elements;
     try {
-      await firebaseConfig
+      await firebase
         .auth()
         .createUserWithEmailAndPassword(email.value, password.value);
       history.push('/');

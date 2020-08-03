@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
-import {Link, useParams} from 'react-router-dom'
 import './css/Search.css'
 import {ChaosDemons, ChaosKnights, ChaosSpaceMarines, CrimsonFists, Custodes, Deathguard, Drukhari, Eldar, GenestealerCultists, Harlequins, ImperialGuard, ImperialKnight, Necrons, Orks, SistersOfBattle, Tau, ThousandSons, Tyranids} from "./ImageList"
-import ChaosDemon from './images/ChaosDemons.jpg'
 
 class Search extends Component {
   constructor() {

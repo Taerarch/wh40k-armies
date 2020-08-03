@@ -1,19 +1,32 @@
+
+
 #nav-bar {
   background-color: black;
   color: white;
-  text-decoration: none;
   display: flex;
   justify-content: space-around;
   min-height: 10vh;
   background: black;
   padding: 1em;
+  font-size: 16px;
 }
 
-a {
+#logoutB {
+  background: none;
+  border: none;
+  padding: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+
+#logoutB button, a {
   color: white;
   text-decoration: none;
 }
 
-a:hover {
+a:hover, button:hover {
   text-decoration: underline;
 }

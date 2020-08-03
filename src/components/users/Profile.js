@@ -1,14 +1,20 @@
-import React, {Component} from 'react';
+import React, {useContext} from 'react';
 import '../css/Profile.css'
+import firebase from '../firebase/Base.js'
+import {AuthContext} from './Auth'
 
-class Profile extends Component {
-  render() {
-    return (
-      <div class="main">
-        <h1>This will be the profile page</h1>
-      </div>
-    )
-  }
+
+
+const Profile = () => {
+  const {currentUser} = useContext(AuthContext);
+
+  return (
+    <div class="main">
+      <h2>{currentUser.email}</h2>
+
+      <h1>This will be the profile page</h1>
+    </div>
+  )
 }
 
 export default Profile

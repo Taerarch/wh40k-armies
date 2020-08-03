@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
+// import Army from './test/DarkAngelsCurrent.html';
 
 
 class ArmyShow extends Component {
   render() {
     return (
-      <h1>This will be the show page.</h1>
+      <h1>ArmyShow</h1>
     )
   }
 }
 
-export default ArmyShow
+export default ArmyShow;
