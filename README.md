@@ -31,4 +31,4 @@ Pages:
 Database:
 
 - Users - Username, Email, Password and Auth
-Army Lists, Name, Army Document, User
+- Army Lists, Name, Army Document, User
