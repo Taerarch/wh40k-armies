@@ -52,9 +52,11 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <PrivateRoute path='/Create' exact component={Create} />
+          <Route path='/ArmyInput' exact component={ArmyInput} />
           <PrivateRoute path='/Profile' exact component={Profile} />
           <Route path='/Login' exact component={Login} />
           <Route path='/Signup' exact component={Signup} />
+          <Route path='/ArmyShow' exact component={ArmyShow} />
           <Route path='/SearchResults/:query' exact component={SearchResults} query={<Search />}/>
         </Switch>
       </Router>

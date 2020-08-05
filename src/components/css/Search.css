@@ -1,4 +1,13 @@
+#army-box {
+  width: 40%;
+  background-color: gray;
+  padding: 2em;
+  margin: 2em;
+}
+
+
 #army-box img{
   width: 100px;
   height: 100px;
+  margin: 6px;
 }

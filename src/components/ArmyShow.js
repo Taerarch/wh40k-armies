@@ -1,11 +1,27 @@
 import React, {Component} from 'react';
-// import Army from './test/DarkAngelsCurrent.html';
+import './css/Army-show.css'
+import army from './helpers/DarkAngelsCurrent.json'
 
 
 class ArmyShow extends Component {
   render() {
     return (
-      <h1>ArmyShow</h1>
+      <div class="main">
+        <h1>{army.armyName}</h1>
+        {army.detachments.map((detachment) => {
+          return <div class="detachment">
+            <h2>{detachment.detachmentName}</h2>
+            {detachment.battlefieldRoles.map((role) => {
+              return <div class="battlefieldRole">
+                <h3>{role.roleName}</h3>
+                {role.units.map((unit) => {
+                  return <p>{unit}</p>
+                })}
+              </div>
+            })}
+          </div>
+        })}
+      </div>
     )
   }
 }
