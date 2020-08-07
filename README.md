@@ -3,13 +3,13 @@ Warhammer List Comparer Project
 Core Features:
 
 - Ability to search through army lists dependent on faction/army as well as battle size
-- Users Login/Signup Army Lists	
-- Way to easily upload an army list from Battlescribe
-- Accessible show page for an army list
+- Users Login/Signup Army Lists	- x
+- Way to easily upload an army list from Battlescribe - x
+- Accessible show page for an army list - x
 - Ability to write a description for one of your own army lists
 - Ability to write comments on any list with up and downvoting
 - Popularity index on various armies
-- Nav-bar 
+- Nav-bar -x
 
 Stretch Goals:
 
@@ -23,12 +23,15 @@ Stretch Goals:
 
 Pages:
 	
-- Home/Search page
-- List Show page
-- User Login/Signup page
-- Nav Bar
+- Home/Search page -x
+- List Show page -x
+- User Login/Signup page -x
+- Nav Bar -x
 
 Database:
 
 - Users - Username, Email, Password and Auth
 - Army Lists, Name, Army Document, User
+
+
+Link: https://army-lists-40k.web.app/
