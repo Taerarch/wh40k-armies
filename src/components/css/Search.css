@@ -1,13 +1,17 @@
 #army-box {
   width: 40%;
-  background-color: gray;
+  background-color: #245;
   padding: 2em;
   margin: 2em;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 5px;
 }
-
 
 #army-box img{
   width: 100px;
   height: 100px;
   margin: 6px;
+  object-fit: cover;
+  object-position: center;
 }

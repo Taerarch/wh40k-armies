@@ -18,16 +18,10 @@ class Search extends Component {
 
 render() {
     return (
-      <div>
-        <form>
-          <input type="search" />
-          <button>Search</button>
-        </form>
         <div id="army-box">
           <ChaosSpaceMarines/><ChaosDemons/><ChaosKnights/><CrimsonFists/><Custodes/><Deathguard/><Drukhari/><Eldar/><GenestealerCultists/><Harlequins/><ImperialGuard/><ImperialKnight/><Necrons/><Orks/>
           <SistersOfBattle/><Tau/><ThousandSons/><Tyranids/>
         </div>
-      </div>
     )
   }
 }

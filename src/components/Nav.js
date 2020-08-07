@@ -19,18 +19,15 @@ const Nav = () => {
         |
 
         {currentUser ?
-          <div>
+          <div class="nav-links">
             <Link to="/Create">
               Create
             </Link>
             |
-            <Link to="Profile">
-              Profile
-            </Link>
-            |
-            <button id="logoutB" onClick={() => firebase.auth().signOut()}>Sign Out</button>
+
+            <button id="logout" onClick={() => firebase.auth().signOut()}>Sign Out</button>
           </div> :
-          <div>
+          <div class="nav-links">
             <Link to="Login">
               Login
             </Link>

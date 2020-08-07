@@ -1,12 +1,15 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 import './css/Army-show.css'
-import army from './helpers/DarkAngelsCurrent.json'
+import firebase, {db, storage} from './firebase/Base'
 
 
-class ArmyShow extends Component {
-  render() {
-    return (
-      <div class="main">
+const ArmyShow =(props) => {
+  console.log("about", props.location.armyProps);
+  const army = props.location.armyProps.army
+
+  return (
+    <div class="main">
+      <div class="show">
         <h1>{army.armyName}</h1>
         {army.detachments.map((detachment) => {
           return <div class="detachment">
@@ -22,8 +25,8 @@ class ArmyShow extends Component {
           </div>
         })}
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default ArmyShow;

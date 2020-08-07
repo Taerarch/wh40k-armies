@@ -11,6 +11,4 @@ const databaseURL = "https://army-lists-40k.firebaseio.com";
 firestoreService.initializeApp(serviceAccount, databaseURL);
 
 // Start exporting your data
-firestoreService
-  .backup('collection-name')
-  .then((data) => console.log(JSON.stringify(data)));
+firestoreService.restore('../helpers/DarkAngelsCurrent.json')

@@ -1,7 +1,8 @@
+import React from 'react';
 const $ = require('cheerio');
 const fs = require('fs');
 
-const input = fs.readFileSync('../test/DarkAngelsCurrent.html', 'utf-8')
+// const input = fs.readFileSync('../test/DarkAngelsCurrent.html', 'utf-8')
 // console.log(input);
 const fileName = './DarkAngelsCurrent.json'
 
@@ -83,10 +84,10 @@ const trimJSON = (inputJSON) => {
   return JSON.stringify(createArrayofDetachments(inputJSON), null, 4)
 }
 
-
-fs.writeFile(
-  fileName,
-  trimJSON(input),
-  'utf-8',
-  () => {}
-)
+// fs.writeFile(
+//   fileName,
+//   trimJSON(input),
+//   'utf-8',
+//   () => {}
+// )
+export default trimJSON
