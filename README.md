@@ -33,5 +33,9 @@ Database:
 - Users - Username, Email, Password and Auth
 - Army Lists, Name, Army Document, User
 
+Technologies:
+- React
+- Firebase
+- Cheerio
 
 Link: https://army-lists-40k.web.app/
