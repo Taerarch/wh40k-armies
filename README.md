@@ -20,7 +20,7 @@
 - Some sort of tags system for armies, eg. ‘Castle’, ‘Assault’, ‘Mobile’, ‘Horde’ etc. - [ ]
 - Search through armies based on individual units - [ ]
 - Nice slidey turnwheel? of the army images - [ ]
-- Concurrent Loading - Lazy loading - [ ]
+- Concurrent Mode - Lazy loading - [ ]
 
 ## Pages:
 	
