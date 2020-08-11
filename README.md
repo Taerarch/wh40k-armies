@@ -2,14 +2,14 @@
 
 ## Core Features:
 
-- Ability to search through army lists dependent on faction/army as well as battle size - [ ]
-- Users Login/Signup Army Lists	- [x]
-- Way to easily upload an army list from Battlescribe - [x]
-- Accessible show page for an army list - [x]
-- Ability to write a description for one of your own army lists - [ ]
-- Ability to write comments on any list with up and downvoting - [ ]
-- Popularity index on various armies - [ ]
-- Nav-bar - [x]
+- [ ]Ability to search through army lists dependent on faction/army as well as battle size
+- [x]Users Login/Signup Army Lists
+- [x]Way to easily upload an army list from Battlescribe
+- [x]Accessible show page for an army list
+- [ ]Ability to write a description for one of your own army lists
+- [ ]Ability to write comments on any list with up and downvoting
+- [ ]Popularity index on various armies
+- [x]Nav-bar
 
 ## Stretch Goals:
 
