@@ -1,6 +1,6 @@
-Warhammer List Comparer Project
+# Warhammer List Comparer Project
 
-Core Features:
+## Core Features:
 
 - Ability to search through army lists dependent on faction/army as well as battle size - [ ]
 - Users Login/Signup Army Lists	- [x]
@@ -11,7 +11,7 @@ Core Features:
 - Popularity index on various armies - [ ]
 - Nav-bar - [x]
 
-Stretch Goals:
+## Stretch Goals:
 
 - Distinction between Matched play and crusade lists - [ ]
 - Display of individual units while on the show page getting information from battlescribe or wahapedia - [ ]
@@ -21,19 +21,19 @@ Stretch Goals:
 - Search through armies based on individual units - [ ]
 - Nice slidey turnwheel? of the army images - [ ]
 
-Pages:
+## Pages:
 	
 - Home/Search page - [x]
 - List Show page - [x]
 - User Login/Signup page - [x]
 - Nav Bar - [x]
 
-Database:
+## Database:
 
 - Users - Username, Email, Password and Auth
 - Army Lists, Name, Army Document, User
 
-Technologies:
+## Technologies:
 - React
 - React Context
 - Firebase
