@@ -2,8 +2,8 @@
 
 ## Core Features:
 
--[ ]Ability to search through army lists dependent on faction/army as well as battle size
--[x]Users Login/Signup Army Lists
+-[ ] Ability to search through army lists dependent on faction/army as well as battle size
+-[x] Users Login/Signup Army Lists
 - [x]Way to easily upload an army list from Battlescribe
 - [x]Accessible show page for an army list
 - [ ]Ability to write a description for one of your own army lists
