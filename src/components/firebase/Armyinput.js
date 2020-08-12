@@ -18,6 +18,7 @@ export const ArmyInput = ({army}) => {
   return (
     <div>
       <input value={armyName} onChange={(e) => {setName(e.target.value)}}/>
+      <br></br>
       <button onClick={onUpdate}>Update</button>
       <button onClick={onDelete}>Delete</button>
     </div>

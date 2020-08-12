@@ -1,21 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './css/Army-show.css'
-import firebase, {db, storage} from './firebase/Base'
 
 
 const ArmyShow =(props) => {
   console.log("about", props.location.armyProps);
+  // Redirect if props not present.
   const army = props.location.armyProps.army
 
   return (
-    <div class="main">
-      <div class="show">
+    <div className="main">
+      <div className="show">
         <h1>{army.armyName}</h1>
         {army.detachments.map((detachment) => {
-          return <div class="detachment">
+          return <div className="detachment">
             <h2>{detachment.detachmentName}</h2>
             {detachment.battlefieldRoles.map((role) => {
-              return <div class="battlefieldRole">
+              return <div className="battlefieldRole">
                 <h3>{role.roleName}</h3>
                 {role.units.map((unit) => {
                   return <p>{unit}</p>

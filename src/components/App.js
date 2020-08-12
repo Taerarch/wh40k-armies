@@ -1,5 +1,4 @@
 import React from 'react';
-import firebase from './firebase/Base'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './Home'
 import Profile from './users/Profile'
@@ -13,6 +12,7 @@ import {AuthProvider} from './users/Auth'
 import PrivateRoute from './users/PrivateRoute'
 import ArmyShow from './ArmyShow'
 import ArmyInput from './firebase/Armyinput'
+import './css/General.css'
 
 
 

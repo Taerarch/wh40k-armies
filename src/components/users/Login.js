@@ -2,6 +2,7 @@ import React, {useCallback, useContext} from 'react';
 import {withRouter, Redirect} from 'react-router';
 import firebase from '../firebase/Base.js';
 import {AuthContext} from './Auth'
+import '../css/User.css'
 
 // firebase.initializeApp(firebaseConfig);
 
@@ -28,19 +29,26 @@ if (currentUser) {
 
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Log In</button>
-      </form>
+    <div class="main">
+      <div class="userPage">
+        <h1>Login</h1>
+
+        <form onSubmit={handleLogin}>
+          <div>
+            <label>
+              Email:
+              <input class="form" name="email" type="email" placeholder="Email" />
+            </label>
+          </div>
+          <div>
+            <label>
+              Password:
+              <input class="form" name="password" type="password" placeholder="Password" />
+            </label>
+          </div>
+          <button type="submit">Log In</button>
+        </form>
+      </div>
     </div>
   )
 }

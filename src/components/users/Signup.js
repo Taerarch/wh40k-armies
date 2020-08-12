@@ -1,18 +1,20 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 import {withRouter} from 'react-router';
-import firebase from '../firebase/Base.js';
+import auth from '../firebase/Base.js';
+import '../css/User.css'
 
 
-// firebase.initializeApp(firebaseConfig);
 
 const SignUp = ({history}) => {
-  const handleSignUp = useCallback(async event => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSignUp = useCallback(async (event) => {
     event.preventDefault();
-    const {email, password} = event.target.elements;
     try {
-      await firebase
+      await auth
         .auth()
-        .createUserWithEmailAndPassword(email.value, password.value);
+        .createUserWithEmailAndPassword(email, password);
       history.push('/');
     } catch (error) {
       alert(error);
@@ -21,19 +23,25 @@ const SignUp = ({history}) => {
 
 
   return (
-    <div>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSignUp}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Sign Up</button>
-      </form>
+    <div className="main">
+      <div className="userPage">
+        <h1>Sign Up</h1>
+        <form onSubmit={handleSignUp}>
+          <div>
+            <label>
+              Email:
+              <input className="form" value={email} type="email" placeholder="Email" />
+            </label>
+          </div>
+          <div>
+            <label>
+              Password:
+              <input className="form" value={password} type="password" placeholder="Password" />
+            </label>
+            <button type="submit">Sign Up</button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

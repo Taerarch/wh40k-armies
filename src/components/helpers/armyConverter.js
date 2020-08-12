@@ -1,35 +1,28 @@
-import React from 'react';
 const $ = require('cheerio');
-const fs = require('fs');
+// const fs = require('fs');
 
-// const input = fs.readFileSync('../test/DarkAngelsCurrent.html', 'utf-8')
-// console.log(input);
-const fileName = './DarkAngelsCurrent.json'
-
+// const fileName = './DarkAngelsCurrent.json'
+// Was used as a test
 
 // Take the JSON file and then
 const trimJSON = (inputJSON) => {
-  const armies = [
-    {
-      armyName: $('h1', inputJSON).text(),
-      detachments: [
-        {
-          detachmentName: "",
-          battlefieldRoles: [
-            {
-              roleName: "",
-              units: [""]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-  // const armyTitle = $('h1', inputJSON).text()
 
-  const getArmyName = (inputJSON) => {
-    return {armyName: $('h1', inputJSON).text()}
-  }
+  // const armiesBlueprint = [
+  //   {
+  //     armyName: $('h1', inputJSON).text(),
+  //     detachments: [
+  //       {
+  //         detachmentName: "",
+  //         battlefieldRoles: [
+  //           {
+  //             roleName: "",
+  //             units: [""]
+  //           }
+  //         ]
+  //       }
+  //     ]
+  //   }
+  // ]
 
   const createArrayofDetachments = (inputJSON) => {
     return {
@@ -38,7 +31,6 @@ const trimJSON = (inputJSON) => {
         return getDetachmentName(det)
       }).get()}
   }
-
 
   const getDetachmentName = (det) => {
     return {
@@ -60,30 +52,16 @@ const trimJSON = (inputJSON) => {
     }
   }
 
-
-  // const batRoles = (detInput) => {
-  //   return $('.category', detInput).map((i, r) => {
-  //     roleName: $('h3', r).text(), units: getUnits(r)
-  //   }).get()
-  // }
-
   const getUnits = (roleInput) => {
     return $('.rootselection > h4', roleInput).map((i, u) => $(u).text()).get();
   }
 
-  const detTitles = (det) => {
-    return $('h2', det).map((i, title) => $(title).text()).get()
-  } //
 
 
-  // const detTitles = $('h2', detachments).map((i, title) => $(title).text()).get();
-
-  // get() changes it back to an array
-
-  // armies.push(getArmyName(inputJSON))
   return JSON.stringify(createArrayofDetachments(inputJSON), null, 4)
 }
 
+// Was used for testing //
 // fs.writeFile(
 //   fileName,
 //   trimJSON(input),

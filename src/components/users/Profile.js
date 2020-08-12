@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import '../css/Profile.css'
-import {firebase, storage} from '../firebase/Base.js'
 import {AuthContext} from './Auth'
 
 
@@ -24,7 +23,7 @@ const Profile = () => {
           </div>
         </form>
 
-          
+
     </div>
   )
 }

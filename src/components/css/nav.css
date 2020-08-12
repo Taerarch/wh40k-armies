@@ -22,7 +22,6 @@
   color: white;
   cursor: pointer;
   font-size: 20px;
-
 }
 
 
@@ -31,6 +30,6 @@
   text-decoration: none;
 }
 
-a:hover, button:hover {
+/* a:hover, button:hover {
   text-decoration: underline;
-}
+} */
