@@ -9,6 +9,7 @@ import './css/Create.css'
 function Create() {
   const [armies, setArmies] = useState([])
   const [newArmy, setNewArmy] = useState('')
+  const [newDescription, setNewDescription] = useState('')
 
   React.useEffect(() => {
     return db.collection('armies').onSnapshot((snapshot) => {
@@ -19,7 +20,7 @@ function Create() {
   }, [])
 
   const onCreate = () => {
-    const armyJSONconvert = trimJSON(newArmy)
+    const armyJSONconvert = trimJSON(newArmy, newDescription)
     db.collection('armies').add(JSON.parse(armyJSONconvert))
   }
 
@@ -38,10 +39,9 @@ function Create() {
           <button id="createList" onClick={onCreate}>Create List</button>
       </div>
       <div id="description">
-        <h3>Description</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, cupiditate, vero. Porro accusantium repellat provident expedita qui dolore voluptas sunt ad id, culpa maiores corrupti reiciendis eligendi, eum aperiam! Tempore?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quia rerum ipsam sapiente magnam repellat enim. Dolor fugit id dolore, laboriosam mollitia porro iste aperiam suscipit, hic, enim ipsam? Saepe.</p>
+        <h3>Write a Description</h3>
+        <textarea id="descriptionInput" name={newDescription} onChange={(e) => setNewDescription(e.target.value)}/>
+
       </div>
       <div id="listArmies">
         <h3>List of your armies</h3>

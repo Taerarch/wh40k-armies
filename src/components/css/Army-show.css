@@ -3,11 +3,23 @@
   background-color: rgb(255, 255, 255, 0.5)
 }
 
-.battlefieldRole {
+.battlefieldRole, #showDescription {
   background-color: #245;
   margin: 1em;
   padding: 1em;
-  width: 50vh;
+  width: 26vw;
   color: white;
   border-radius: 5px;
+}
+
+#showPage {
+  display: flex;
+}
+
+#emptySpace {
+  flex-grow: 1;
+}
+
+#showDescription {
+  height: 40vh;
 }

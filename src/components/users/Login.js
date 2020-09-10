@@ -29,21 +29,21 @@ if (currentUser) {
 
 
   return (
-    <div class="main">
-      <div class="userPage">
+    <div className="main">
+      <div className="userPage">
         <h1>Login</h1>
 
         <form onSubmit={handleLogin}>
           <div>
             <label>
               Email:
-              <input class="form" name="email" type="email" placeholder="Email" />
+              <input className="form" name="email" type="email" placeholder="Email" />
             </label>
           </div>
           <div>
             <label>
               Password:
-              <input class="form" name="password" type="password" placeholder="Password" />
+              <input className="form" name="password" type="password" placeholder="Password" />
             </label>
           </div>
           <button type="submit">Log In</button>

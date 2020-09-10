@@ -28,7 +28,7 @@ function App() {
             <PrivateRoute path='/Profile' exact component={Profile} />
             <Route path='/Login' exact component={Login} />
             <Route path='/Signup' exact component={Signup} />
-            <Route path='/ArmyShow' exact component={ArmyShow}/>
+            <PrivateRoute path='/ArmyShow' exact component={ArmyShow}/>
             <PrivateRoute path='/Armyinput' exact component={ArmyInput}/>
             <Route path='/SearchResults/:query' exact component={SearchResults} query={<Search />}/>
           </Switch>

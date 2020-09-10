@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+import AdeptusMechanicusImage from './images/AdeptusMechanicus.jpg'
 import ChaosDemonsImage from './images/ChaosDemons.jpg'
 import ChaosKnightsImage from './images/ChaosKnights.jpg'
 import ChaosSpaceMarinesImage from './images/ChaosSpaceMarines.jpg'
@@ -19,6 +20,10 @@ import SistersOfBattleImage from './images/SistersOfBattle.jpg'
 import TauImage from './images/Tau.jpg'
 import ThousandSonsImage from './images/ThousandSons.jpeg'
 import TyranidsImage from './images/Tyranids.jpg'
+import YnnariImage from './images/Ynnari.jpg'
+
+export const AdeptusMechanicus = () => <Link to='/SearchResults/AdeptusMechanicus' >
+				<img src={AdeptusMechanicusImage}  alt='AdeptusMechanicus' /></Link>
 
 export const ChaosDemons = () => <Link to='/SearchResults/ChaosDemons' >
 				<img src={ChaosDemonsImage}  alt='ChaosDemons' /></Link>
@@ -73,3 +78,6 @@ export const ThousandSons = () => <Link to='/SearchResults/ThousandSons' >
 
 export const Tyranids = () => <Link to='/SearchResults/Tyranids' >
 				<img src={TyranidsImage}  alt='Tyranids' /></Link>
+
+export const Ynnari = () => <Link to='/SearchResults/Ynnari' >
+				<img src={YnnariImage}  alt='Ynnari' /></Link>

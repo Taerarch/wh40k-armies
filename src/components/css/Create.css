@@ -14,9 +14,12 @@
   width: 23%;
 }
 
-#armyInput {
+#armyInput, #descriptionInput {
   min-height: 400px;
   width: 90%
+}
+#listArmies {
+  min-height: 400px;
 }
 
 

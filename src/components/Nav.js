@@ -24,7 +24,6 @@ const Nav = () => {
               Create
             </Link>
             |
-
             <button id="logout" onClick={() => firebase.auth().signOut()}>Sign Out</button>
           </div> :
           <div className="nav-links">
