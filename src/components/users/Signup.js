@@ -1,25 +1,31 @@
-import React, {useCallback, useState} from 'react';
-import {withRouter} from 'react-router';
-import auth from '../firebase/Base.js';
+import React, {useCallback, useContext} from 'react';
+import {withRouter, Redirect} from 'react-router';
+import firebase from '../firebase/Base.js';
+import {AuthContext} from './Auth'
 import '../css/User.css'
 
 
 
 const SignUp = ({history}) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSignUp = useCallback(async (event) => {
+  const handleSignUp = useCallback(async event => {
     event.preventDefault();
+    const {email, password} = event.target.elements;
     try {
-      await auth
+      await firebase
         .auth()
-        .createUserWithEmailAndPassword(email, password);
+        .createUserWithEmailAndPassword(email.value, password.value);
       history.push('/');
     } catch (error) {
       alert(error);
     }
   }, [history]);
+
+  const {currentUser} = useContext(AuthContext);
+
+
+  if (currentUser) {
+    return <Redirect to="/" />;
+  }
 
 
   return (
@@ -30,13 +36,13 @@ const SignUp = ({history}) => {
           <div>
             <label>
               Email:
-              <input className="form" value={email} type="email" placeholder="Email" />
+              <input className="form" name="email" type="email" placeholder="Email" />
             </label>
           </div>
           <div>
             <label>
               Password:
-              <input className="form" value={password} type="password" placeholder="Password" />
+              <input className="form" name="password" type="password" placeholder="Password" />
             </label>
             <button type="submit">Sign Up</button>
           </div>

@@ -1,5 +1,6 @@
 const $ = require('cheerio');
 
+
 // const fs = require('fs');
 // const fileName = './DarkAngelsCurrent.json'
 // Was used as a test
@@ -14,9 +15,10 @@ const trimDetachment = (inputString) => {
   return allDetachments.find(detachment => inputString.includes(detachment));
 }
 
-const trimJSON = (inputJSON, inputDescription) => {
+const trimJSON = (inputJSON, inputDescription, currentUser) => {
   const createArrayofDetachments = (inputJSON) => {
     return {
+      userName: currentUser,
       armyName: $('h1', inputJSON).text(),
       armyFaction: trimFaction($('li > h2', inputJSON).text()),
       description: inputDescription,

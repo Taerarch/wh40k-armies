@@ -1,15 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import {Link} from 'react-router-dom';
 import {db} from './firebase/Base'
 import {ArmyInput} from './firebase/Armyinput'
 import trimJSON from './helpers/armyConverter'
 import './css/Create.css'
+import {AuthContext} from './users/Auth'
+
 
 
 function Create() {
   const [armies, setArmies] = useState([])
   const [newArmy, setNewArmy] = useState('')
   const [newDescription, setNewDescription] = useState('')
+  const {currentUser} = useContext(AuthContext);
+
 
   React.useEffect(() => {
     return db.collection('armies').onSnapshot((snapshot) => {
@@ -20,7 +24,7 @@ function Create() {
   }, [])
 
   const onCreate = () => {
-    const armyJSONconvert = trimJSON(newArmy, newDescription)
+    const armyJSONconvert = trimJSON(newArmy, newDescription, currentUser.email)
     db.collection('armies').add(JSON.parse(armyJSONconvert))
   }
 
@@ -45,12 +49,12 @@ function Create() {
       </div>
       <div id="listArmies">
         <h3>List of your armies</h3>
-        {armies.map(army => (
+        {armies.filter(army => army.userName === currentUser.email).map(army =>
           <h5 key={army.armyName}>
             <ArmyInput army={army}/>
             <Link to={{pathname: '/ArmyShow', armyProps:{army}}} alt={army.armyName}><p>Showpage</p></Link>
           </h5>
-        ))}
+        )}
       </div>
     </div>
   )

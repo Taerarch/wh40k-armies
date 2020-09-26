@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './css/Factions.css'
-import {ChaosDemons, ChaosKnights, ChaosSpaceMarines, CrimsonFists, Custodes, Deathguard, Drukhari, Eldar, GenestealerCultists, Harlequins, ImperialGuard, ImperialKnight, Necrons, Orks, SistersOfBattle, Tau, ThousandSons, Tyranids, AdeptusMechanicus, Ynnari} from "./ImageList"
+import {Daemons, ChaosKnights, ChaosSpaceMarines, AdeptusAstartes, AdeptusCustodes, Deathguard, Drukhari, Craftworlds, GenestealerCults, Harlequins, AstraMilitarum, ImperialKnights, Necrons, Orks, AdeptaSororitas, TauEmpire, ThousandSons, Tyranids, AdeptusMechanicus, Ynnari} from "./ImageList"
 
 class Factions extends Component {
   constructor() {
@@ -19,8 +19,8 @@ class Factions extends Component {
 render() {
     return (
       <div id="army-box">
-        <ChaosSpaceMarines/><ChaosDemons/><ChaosKnights/><CrimsonFists/><Custodes/><Deathguard/><Drukhari/><Eldar/><GenestealerCultists/><Harlequins/><ImperialGuard/><ImperialKnight/><Necrons/><Orks/>
-        <SistersOfBattle/><Tau/><ThousandSons/><Tyranids/><AdeptusMechanicus/><Ynnari/>
+        <ChaosSpaceMarines/><Daemons/><ChaosKnights/><AdeptusAstartes/><AdeptusCustodes/><Deathguard/><Drukhari/><Craftworlds/><GenestealerCults/><Harlequins/><AstraMilitarum/><ImperialKnights/><Necrons/><Orks/>
+        <AdeptaSororitas/><TauEmpire/><ThousandSons/><Tyranids/><AdeptusMechanicus/><Ynnari/>
       </div>
     )
   }

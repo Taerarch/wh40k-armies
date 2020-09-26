@@ -10,8 +10,8 @@ const ArmyShow = (props) => {
     <div className="main">
       <h1>{army.armyName}</h1>
       <h2>{army.armyFaction}</h2>
+
       <div id="showPage" >
-        <div id="showArmy">
           {army.detachments.map((detachment) => {
             return <div className="detachment">
               <h2>{detachment.detachmentName}</h2>
@@ -30,8 +30,8 @@ const ArmyShow = (props) => {
         <div id="showDescription">
           <h2>Description</h2>
           <p>{army.description}</p>
-        </div>
       </div>
+
     </div>
   )
 }
