@@ -31,7 +31,6 @@ const ArmyShow = (props) => {
           <h2>Description</h2>
           <p>{army.description}</p>
       </div>
-
     </div>
   )
 }

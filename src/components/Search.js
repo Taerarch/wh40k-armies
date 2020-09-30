@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import {db} from './firebase/Base'
 import './css/Search.css'
@@ -6,7 +6,7 @@ import './css/Search.css'
 function Search() {
   const [armies, setArmies] = useState([])
 
-  React.useEffect(() => {
+  useEffect(() => {
     return db.collection('armies').onSnapshot((snapshot) => {
       const armiesData = [];
       snapshot.forEach(doc => armiesData.push({ ...doc.data(), id: doc.id}));

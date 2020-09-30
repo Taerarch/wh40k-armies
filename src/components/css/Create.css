@@ -14,7 +14,7 @@
   width: 23%;
 }
 
-#armyInput, #descriptionInput {
+#descriptionInput {
   min-height: 400px;
   width: 90%
 }

@@ -28,6 +28,21 @@ function Create() {
     db.collection('armies').add(JSON.parse(armyJSONconvert))
   }
 
+  const readSingleFile = (importedFile) => {
+  let f = importedFile.target.files[0];
+
+  if (f) {
+    const r = new FileReader();
+    r.onload = function(e) {
+      let contents = e.target.result;
+      setNewArmy(contents)
+    }
+    r.readAsText(f);
+  } else {
+    alert("Failed to load file");
+  }
+}
+
 // Take text input
   return (
     <div id="create">
@@ -36,9 +51,9 @@ function Create() {
           <ol>
             <li>Make a legal list within Battlescribe.</li>
             <li>Export the list with the Export as HTML button.</li>
-            <li>Copy and paste the contents into this field.</li>
+            <li>Select that file to import your army list.</li>
           </ol>
-          <textarea id="armyInput" name={newArmy} onChange={(e) => setNewArmy(e.target.value)}/>
+          <input type="file" id="armyInput" name={newArmy} onChange={(e) => readSingleFile(e)}/>
           <br></br>
           <button id="createList" onClick={onCreate}>Create List</button>
       </div>

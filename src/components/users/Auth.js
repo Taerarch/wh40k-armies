@@ -4,7 +4,7 @@ import {auth} from '../firebase/Base.js'
 export const AuthContext = React.createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState('not logged in');
   const [pending, setPending] = useState(true);
 
   useEffect(() => {
